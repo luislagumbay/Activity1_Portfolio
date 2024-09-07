@@ -1,0 +1,13 @@
+#project_confirm_delete.html
+{% extends "portfolio/base.html" %}
+
+{% block title %}Confirm Delete{% endblock %}
+
+{% block content %}
+    <h1>Are you sure you want to delete "{{ object.title }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm Deletion</button>
+        <a href="{% url 'project-detail' object.pk %}">Cancel</a>
+    </form>
+{% endblock %}

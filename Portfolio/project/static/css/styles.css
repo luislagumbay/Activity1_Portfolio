@@ -1,0 +1,93 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid gold;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffdf00;
+}
+
+main {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-top: 3px solid gold;
+    margin-top: 40px;
+}
+
+footer p {
+    color: gold;
+    font-weight: bold;
+}
+
+/* Fancy Buttons */
+header nav ul li a,
+button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid gold;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover,
+button:hover {
+    background-color: gold;
+    color: #000;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin: 20px;
+        padding: 10px;
+    }
+}

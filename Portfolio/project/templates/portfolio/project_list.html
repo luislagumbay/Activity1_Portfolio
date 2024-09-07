@@ -1,0 +1,22 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Project List{% endblock %}
+
+{% block content %}
+    <h1>Projects</h1>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <h1><a href="{% url 'project-detail' project.pk %}">{{ project.title }}</a></h1>
+                <br>
+                <a href="{% url 'project-update' project.pk %}">Edit</a>
+                <br>
+                <a href="{% url 'project-delete' project.pk %}">Delete</a>
+                <br>
+                 <p>Date Posted: {{ project.date_posted }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{% url 'project-create' %}">Add New Project</a>
+{% endblock %}
